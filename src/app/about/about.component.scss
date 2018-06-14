@@ -1,0 +1,148 @@
+#aboutUs{
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  float: left;
+  .up-servicios{
+    position: relative;
+    background: url("../../assets/back-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    float: left;
+    padding: 30px 7% 0 7%;
+    overflow: hidden;
+    .img-doctor{
+      width: 35%;
+      position: absolute;
+      float: left;
+      bottom: 0;
+      left: 5%;
+    }
+    .int-qs{
+      position: relative;
+      width: 50%;
+      float: right;
+      padding: 13% 0;
+      h2{
+        width: 100%;
+        text-align: center;
+        float: left;
+        padding-bottom: 3px;
+        margin-bottom: 3px;
+        border-bottom: 2px solid #75cee7;
+      }
+      p{
+        padding: 15px 20px 5px 20px;
+        width: 100%;
+        float: left;
+      }
+      #button-go{
+        width: 200px;
+        background: #229fda;
+        padding: 7px 10px;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        margin: 7px 0 0 3%;
+        float: left;
+        color: #fff;
+        font-weight: 600;
+        img{
+          width: 22px;
+          display: inline-block;
+        }
+        span{
+          font-family: PT Sans Narrow,sans-serif;
+          display: inline-block;
+          padding: 5px 0 0 8px;
+        }
+      }
+    }
+  }
+  /**/
+  #galeria-instalaciones{
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    float: left;
+    position: fixed;
+    background: hsla(0,0%,100%,.8);
+    z-index: 4000;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s;
+    -moz-transition: .3s all;
+    -webkit-transition: all .3s;
+    -ms-transition: .3s all;
+    .cont-instalaciones{
+      width: 50%;
+      margin: 4% auto;
+      .cont-title{
+        width: 100%;
+        margin: 8% 0 15px 0;
+        h1{
+          font-size: 3em;
+          text-align: center;
+          line-height: 40px;
+          margin: 0 0 17px 0;
+          padding: 0 0 1px 0;
+          color: #333d46;
+          padding-bottom: 10px;
+          float: left;
+          width: 100%;
+          border-bottom: 2px solid #75cee7;
+        }
+      }
+    }
+  }
+  .activeGallery{
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transition: 0.3s all;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+  }
+
+}
+@media screen and (max-width: 1366px){
+  #aboutUs{
+    .up-servicios{
+      padding: 30px 1% 0 1%;
+      .img-doctor{
+        width: 38%;
+        position: absolute;
+        float: left;
+        bottom: 0;
+        left: 2%;
+      }
+      .int-qs{
+        position: relative;
+        width: 60%;
+        padding: 30px 1%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 760px){
+  #aboutUs{
+    .up-servicios{
+      .img-doctor{
+        display: none;
+      }
+      .int-qs{
+        position: relative;
+        width: 100%;
+        padding: 30px 4%;
+        p{
+          padding: 15px 1%;
+        }
+      }
+    }
+  }
+}

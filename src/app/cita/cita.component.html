@@ -1,0 +1,45 @@
+<section id="date-page">
+	<button class="btn-regresar" (click)="goHome()"><img  src="./assets/btn-cita.svg" alt=""></button>
+	<img  id="logo-internac" src="./assets/ico-prosmile.svg">
+	<div class="container-fluid" id="section-form">
+		<div class="container padding-cita animated fadeInRight" >
+			<div class="cont-title">
+				<h1>AGENDA TU CITA</h1>
+				<div class="intro-a">
+					Te conoces más que a nadie, te ofrecemos un autodiagnóstico evaluativo, si tienes problemas nosotros te ayudamos.
+				</div>
+			</div>
+			<div class="col-xs-12" id="txt-date">
+				<div class="col-md-7 txt-c">Las citas de pueden solicitar a una semana a partir de hoy. En caso de emergencia, por favor contactarnos directamente a nuestros teléfonos en la sección Contáctanos.</div>
+				<div class="col-md-5 number-c">(593-2) 322 0300</div>
+			</div>
+			<!---->
+      <div class="cont-form">
+				<form (ngSubmit)="sendEmailInformation()">
+					<input class="form-control" type="text" [(ngModel)]='formUser.name' name="name" placeholder="Nombre" >
+					<div class="col-sm-6"><input class="form-control" type="email" [(ngModel)]='formUser.email' name="email" placeholder="E-mail" ></div>
+					<div class="col-sm-6"><input class="form-control" type="text" [(ngModel)]='formUser.phone' name="phone" placeholder="Teléfono" ></div>
+					<div class="col-sm-6"><input class="form-control" type="date" [(ngModel)]='formUser.date' name="date" placeholder="Fecha" ></div>
+					<div class="col-sm-6">
+						<select class="form-control" [(ngModel)]='formUser.time' name="time">
+							<option value="De 10:00 a 11:00">10:00 - 11:00</option>
+							<option value="De 11:00 a 12:00">11:00 - 12:00</option>
+							<option value="De 12:00 a 13:00">12:00 - 13:00</option>
+							<option value="De 13:00 a 14:00">13:00 - 14:00</option>
+							<option value="De 14:00 a 15:00">14:00 - 15:00</option>
+							<option value="De 15:00 a 16:00">15:00 - 16:00</option>
+							<option value="De 16:00 a 17:00">16:00 - 17:00</option>
+							<option value="De 17:00 a 18:00">17:00 - 18:00</option>
+							<option value="De 18:00 a 19:00">18:00 - 19:00</option>
+						</select>
+					</div>
+					<textarea class="form-control" [(ngModel)]='formUser.message' name="message"></textarea>
+					<button type="submit"><img alt="" src="./assets/ico-reserva.svg"><span>Agenta tu cita</span></button>
+				</form>
+			</div>
+			<!---->
+		</div>
+	</div>
+	<div id="back-lines1"><img alt="" src="./assets/back_lines3.svg"></div>
+	<div id="back-lines2"><img alt="" src="./assets/back_lines4.svg"></div>
+</section>

@@ -1,0 +1,85 @@
+#nuestros-especialistas{
+  width: 100%;
+  float: left;
+  padding: 30px 15%;
+  position: relative;
+  .servicios{
+    float: left;
+    padding: 0 20%;
+    h2{
+      text-align: center;
+      border-bottom: 2px solid #75cee7;
+      padding-bottom: 3px;
+      margin-bottom: 3px;
+    }
+    p{
+      width: 100%;
+      padding: 10px 5%;
+      text-align: center;
+    }
+  }
+  .cont-slider{
+    width: 100%;
+    float: left;
+    position: relative;
+
+    .int-especialista{
+      padding: 40px 0;
+      margin-bottom: 7px;
+      display: block;
+      float: left;
+      img{
+        width: 60%;
+        margin: 0 20%;
+        float: left;
+      }
+      .txt-especialista{
+          width: 80%;
+          float: left;
+          font-size: 14px;
+          padding-left: 10px;
+          margin: 0 10%;
+          h4{
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin: 7px 0;
+          }
+          span{
+            font-size: 13px;
+            text-align: center;
+            color: #5e6268;
+            width: 100%;
+            float: left;
+          }
+      }
+    }
+  }
+  #back-lines1, #back-lines2 {
+    position: absolute;
+    z-index: 0;
+  }
+  #back-lines1{
+    width: 15%;
+    top: 10%;
+    left: 0;
+  }
+  #back-lines2{
+    width: 12%;
+    top: 5%;
+    right: 0;
+  }
+}
+@media screen and (max-width: 1280px){
+  #nuestros-especialistas{
+    padding: 30px 10%;
+    .servicios {
+    padding: 0 5%;
+    }
+  }
+}
+@media screen and (max-width: 960px){
+  #nuestros-especialistas{
+    padding: 30px 3%;
+  }
+}

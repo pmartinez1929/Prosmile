@@ -1,0 +1,36 @@
+<section  id="date-page">
+	<div class="container-fluid" id="section-form">
+		<div class="cont-contacto">
+			<div  class="col-sm" id="txt-date">
+				<h1>Llámanos: <br _ngcontent-c5="" class="ng-tns-c5-3">(593-2) 322 0300</h1>
+				<p>
+					Direccíon: Nicolás Arteta y San Gabriel.<br _ngcontent-c5="" class="ng-tns-c5-3">
+					Torres Medicas Hospital Metropolitano.Torre 3 <br _ngcontent-c5="" class="ng-tns-c5-3">
+					Quinto Piso. Of. 508-509<br _ngcontent-c5="" class="ng-tns-c5-3">
+				</p>
+				<div class="cont-icons">
+					<a class="icon-contact" href="https://www.google.com.ec/maps/place/torres+medicas+hospital+metropolitano/@-0.1849672,-78.5044993,17.98z/data=!4m12!1m6!3m5!1s0x91d59a58dd79b1a7:0xf805907604f74be8!2storres+medicas+hospital+metropolitano!8m2!3d-0.1850692!4d-78.5049902!3m4!1s0x91d59a58dd79b1a7:0xf805907604f74be8!8m2!3d-0.1850692!4d-78.5049902?hl=es" target="_blank"><img _ngcontent-c5="" class="ng-tns-c5-3" alt="" src="./assets/ico_map.svg"></a>
+					<a class="icon-contact" href="https://www.facebook.com/ProsmileEc/" target="_blank"><img _ngcontent-c5="" class="ng-tns-c5-3" alt="" src="./assets/ico_facebook.svg"></a>
+				</div>
+			</div>
+			<div class="col-sm" id="cont-form">
+				<h1>Escríbenos</h1>
+				<form  (ngSubmit)="contactPage()">
+					<input  class="form-control" type="text" [(ngModel)]='contact.name' name="name" placeholder="Nombre">
+					<div class="col-sm-6"><input type="text" class="form-control" [(ngModel)]='contact.email' name="email" placeholder="E-mail"></div>
+					<div class="col-sm-6"><input type="text" [(ngModel)]='contact.phone' name="phone" placeholder="Teléfono" ></div>
+					<textarea class="form-control" [(ngModel)]='contact.message' name="message" placeholder="Comentarios"></textarea>
+					<button type="submit"><img alt="" src="./assets/ico-contacto.svg"><span>Enviar</span></button>
+				</form>
+			</div>
+		</div>
+		<div class="container-fluid" id="trabaja-c">
+			<h3>Trabaja con nosotros</h3>
+			<p>Estás interesado/a en trabajar junto a nuestro equipo de profesionales o hacer una pasantía/prácticas en una de nuestras sucursales. Envíanos tu hoja de Vida actualizada a contactanos@prosmile.com.ec y nos pondremos en contacto directamente.</p>
+		</div>
+	</div>
+	<div id="lines4"><img alt="" src="./assets/lines4.svg"></div>
+</section>
+<div class="bar-copyright">
+		© PROSMILE 2011-2018. Todos los derechos reservados
+</div>

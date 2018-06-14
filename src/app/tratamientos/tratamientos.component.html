@@ -1,0 +1,22 @@
+<section class="container-fluid" id="tratamientos">
+	<div class="col-xs-12 servicios">
+		<h2>SERVICIOS Y TRATAMIENTO</h2>
+		<p>
+			ProSmile ofrece todas las especialidades odontológicas dentro de una sola clínica dental. Cada uno de nuestros pacientes es atendido por odontólogos especialistas dependiendo el diagnostico o requerimiento.
+		</p>
+	</div>
+	<div  id="cont-tratamiento" class="animated zoomIn">
+		<!---->
+    <div class="btn-tratamiento" *ngFor="let tratamiento of tratamientos">
+			<div class="tratamiento-c">
+				<img alt="" src="./assets/{{tratamiento.icon}}">
+				<span>{{tratamiento.name}}</span>
+			</div>
+			<div class="hover-tratamiento hvr-shutter-out-horizontal">
+				{{tratamiento.description}}
+			</div>
+		</div>
+		<!---->
+	</div>
+	<div id="lines1"><img alt="" src="./assets/lines3.svg"></div>
+</section>

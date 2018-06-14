@@ -1,0 +1,43 @@
+<section id="auto-page">
+	<button class="btn-regresar" (click)="goHome()"><img src="./assets/btn-cita.svg" alt=""></button>
+	<img  id="logo-internac" src="./assets/ico-prosmile.svg" alt="">
+	<div class="container-fluid" id="section-form">
+		<div class="container diagnostico animated fadeInRight">
+			<div class="cont-title">
+				<h1>AUTODIAGNÓSTICO</h1>
+				<div class="intro-a">
+					Te conoces más que a nadie, te ofrecemos un autodiagnóstico evaluativo, si tienes problemas nosotros te ayudamos.
+				</div>
+			</div>
+			<div class="col-xs-12" id="txt-intro">
+				Comprobamos tu salud mental en base a las respuestas a una serie de preguntas que hemos preparado en base a nuestra experiencia en síntomas comunes en la boca de nuestros pacientes.
+			</div>
+			<div id="cont-autodiagnostico" *ngIf="!isAnswered">
+				<div class="col-xs-12 cont-question" *ngFor="let question of questionDiagnostic">
+					<div class="col-9 question">{{question.question}}</div>
+					<div class="col-3 options-c">
+						<button (click)="getAnswer(true, question.id)"  [ngClass]="question.isPositive == true && question.isAnswer == true ? 'active' : 'no-active'">SI</button>
+						<button (click)="getAnswer(false, question.id)" [ngClass]="question.isPositive == false && question.isAnswer == true ? 'active' : 'no-active'">NO</button>
+					</div>
+				</div>
+				<button class="button-go" (click)="goResults()"><img alt="" src="./assets/ico-resultado.svg"><span _ngcontent-c7="" class="ng-tns-c7-9">Ver Resultados</span></button>
+			</div>
+			<!-- -->
+      <div id="cont-respuestas" *ngIf="isAnswered">
+				<div class="col-xs-12 cont-question" *ngFor="let answer of questionDiagnostic">
+					<div class="col-xs-12 question-c" *ngIf="answer.isPositive">
+						<div class="pregunta-a">{{answer.question}}</div>
+						<div class="respuesta-a">
+              {{answer.answer}}
+						</div>
+					</div>
+				</div>
+				<button class="button-go" (click)="goCita()"><img alt="" src="./assets/ico-reserva.svg"><span>Agenda tu cita</span></button>
+        <button class="button-go" (click)="goQuestionBack()"><img alt="" src="./assets/icon-back.svg"><span>Volver</span></button>
+      </div>
+      <!-- -->
+		</div>
+	</div>
+	<div id="back-lines1"><img _ngcontent-c7="" alt="" src="./assets/back_lines1.svg"></div>
+	<div id="back-lines2"><img _ngcontent-c7="" alt="" src="./assets/back_lines2.svg"></div>
+</section>
