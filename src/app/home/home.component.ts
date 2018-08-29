@@ -35,6 +35,12 @@ export class HomeComponent implements OnInit {
       		scrollTop: $('#home').offset().top
       	}, 500, 'linear');
     });
+    $("#logoprosmile").click(function(e){
+      e.preventDefault();
+      	$('html, body').animate({
+      		scrollTop: $('#home').offset().top
+      	}, 500, 'linear');
+    });
     $("#btn-2").click(function(e){
       e.preventDefault();
       $("#prosmile-mb").toggleClass("active");

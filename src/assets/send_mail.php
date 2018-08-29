@@ -1,9 +1,8 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 $postdata = file_get_contents('php://input');
 $request = json_decode($postdata);
-header("Access-Control-Allow-Origin: *");
-
 
 if(empty($errors))
 {
@@ -12,11 +11,13 @@ if(empty($errors))
 	$from_email = $request->email;
 	$message = $request->message;
 	$from_name = $request->name;
+	$from_tel = $request->phone;
 
 	$to_email = "pablo.martinez@fcbandfire.com";
 
 	$contact = "<p><strong>Name:</strong> $from_name</p>
-							<p><strong>Email:</strong> $from_email</p>";
+							<p><strong>Email:</strong> $from_email</p>
+							<p><strong>Teléfono:</strong> $from_email</p>";
 	$content = "<p>$message</p>";
 
 	$website = 'Comentarios y Sugerencias';

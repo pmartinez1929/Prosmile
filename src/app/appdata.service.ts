@@ -156,7 +156,7 @@ export class AppdataService {
         {
           id:1,
           name:"Dra. Maria Elena Flores",
-          image:"especialistas/m_flores.gif",
+          image:"especialistas/m_flores.png",
           shortdescription:"Especialidad: Rehabilitación Oral, Oclusión y Estética Dental"
         },
         {
@@ -238,22 +238,29 @@ export class AppdataService {
           shortdescription:"Especialidad: Endodoncia",
         }];
 
-        dateUrl = "http://prosmile.com.ec/newProsmile/assets/send_mail_date.php";
-        contactUrl = "http://prosmile.com.ec/newProsmile/assets/send_mail.php";
+        dateUrl = "http://prosmile.com.ec/Prosmile/assets/send_mail_date.php";
+        contactUrl = "http://prosmile.com.ec/Prosmile/assets/send_mail.php";
 
   constructor(public http:HttpClient) { }
 
 
 
   sendAppoinmentUser(message){
-    const headers = new HttpHeaders();
+    /*const headers = new HttpHeaders();
     headers.append('Content-Type','application/json; charset=UTF-8');
     headers.append('Access-Control-Allow-Origin','*');
-    headers.append('Access-Control-Allow-Methods','GET, POST');
+    headers.append('Access-Control-Allow-Methods','GET, POST');*/
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'Access-Control-Allow-Origin' : '*'
+      })
+    };
 
     return new Promise(
       resolve => {
-        this.http.post(this.dateUrl, message, {headers: headers})
+        this.http.post(this.dateUrl, message, httpOptions)
           .subscribe(data => {
             resolve (data)
         })
@@ -262,13 +269,11 @@ export class AppdataService {
 
   sendContact(message){
     const headers = new HttpHeaders();
-    headers.append('Content-Type','application/json; charset=UTF-8');
     headers.append('Access-Control-Allow-Origin','*');
-    headers.append('Access-Control-Allow-Methods','GET, POST');
 
     return new Promise(
       resolve => {
-        this.http.post(this.dateUrl, message, {headers: headers})
+        this.http.post(this.contactUrl, message, {headers:headers})
           .subscribe(data => {
             resolve (data)
         })

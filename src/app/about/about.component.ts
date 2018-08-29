@@ -19,6 +19,9 @@ export class AboutComponent implements OnInit {
       $("#regresargaleria").click(function(){
         $("#galeria-instalaciones").removeClass("activeGallery");
       });
+      $("#btn-galeria-instalaciones").click(function(){
+        $("#galeria-instalaciones").removeClass("activeGallery");
+      });
       $(".slider-galeria").slick({
         centerMode: true,
         centerPadding: '2px',

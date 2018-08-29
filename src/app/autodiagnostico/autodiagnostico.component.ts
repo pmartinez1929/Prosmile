@@ -11,6 +11,8 @@ export class AutodiagnosticoComponent implements OnInit {
 
   isAnswered:boolean;
   questionDiagnostic:any;
+  notAnswered:boolean;
+  messageAllNegative:boolean;
 
   constructor(public appData:AppdataService, private router: Router) { }
 
@@ -33,7 +35,41 @@ export class AutodiagnosticoComponent implements OnInit {
     console.log(this.questionDiagnostic)
   }
   goResults(){
-    this.isAnswered = true;
+    let validateAnswers:number=0;
+    for(var i = 0; i < this.questionDiagnostic.length; i++){
+        if(this.questionDiagnostic[i].isAnswer == true){
+          console.log("ha contestado todo");
+          validateAnswers++;
+          console.log("suma:" + validateAnswers);
+        }else{
+          console.log("le falta contestar");
+        }
+    }
+    if(validateAnswers === 8){
+      this.allAnswerValidation();
+      this.notAnswered =false;
+    }else{
+      this.notAnswered =true;
+    }
+  }
+
+  allAnswerValidation(){
+    let allNegative:number=0;
+    for(var i = 0; i < this.questionDiagnostic.length; i++){
+        if(this.questionDiagnostic[i].isPositive == false){
+          allNegative++;
+          console.log("suma:" + allNegative);
+        }else{
+          console.log("le falta contestar");
+        }
+    }
+    this.isAnswered=true;
+
+    if(allNegative === 8){
+      this.messageAllNegative = true;
+    }else{
+      this.messageAllNegative = false;
+    }
 
   }
 

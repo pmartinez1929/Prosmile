@@ -9,6 +9,7 @@
     #logoprosmile{
       width: 17%;
       float: left;
+      
     }
     #cont-menu{
       width: 80%;
@@ -86,7 +87,7 @@
   width: 100%;
   float: left;
   position: relative;
-  background: url("../../assets/back-home2.jpg");
+  background: url("../../assets/back-home.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 120px 0 0 0;
@@ -124,7 +125,7 @@
       z-index: 1000;
       h1{
         color: #75cee7;
-        text-shadow: 4px 4px 5px #8a8a8a;
+        text-shadow: 3px 3px 5px #637e80;
       }
       button{
          width: 200px;
@@ -137,6 +138,7 @@
          float: right;
          color: #fff;
          font-weight: 600;
+         display: none;
          img{
            width: 22px;
            display: inline-block;
@@ -212,6 +214,23 @@
     }
   }
 }
+@media screen and (max-width: 1448px){
+  #home{
+    #section-cita{
+      #img-home{
+        width: 43%;
+        margin: 0 0 0 2%;
+        .cont-name-doctors{
+          .name-docs{
+            width: 48%;
+            margin:0 1%;
+            padding: 8px 2%;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px){
   #home{
     #section-cita{
@@ -233,6 +252,19 @@
     }
   }
 }
+@media screen and (max-width: 835px){
+  #home{
+    #section-cita{
+      #img-home{
+        .cont-name-doctors{
+          .name-docs{
+            padding: 8px 9%;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 760px){
   #home{
     #section-cita{
@@ -244,5 +276,34 @@
         margin: 5% 4% 30px 4%;
       }
     }
+  }
+}
+@media screen and (max-width:400px){
+  #header-prosmile{
+    #logoprosmile{
+       width: 45%;
+     }
+      #cont-menu{
+      width: 53%;
+      float: left;
+      margin: 5px 0 0 2%;
+      padding: 0 0 3px 0;
+      border-bottom: 1px solid #5e6268;
+      #prosmile-mb {
+        padding: 10px 5px 16px 0;
+        margin-left: 5px;
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+  #btn_exam {
+    position: fixed;
+    right: 60px;
+    width: 70px;
+  }
+  #btn_date[_ngcontent-c1] {
+    width: 80px;
   }
 }

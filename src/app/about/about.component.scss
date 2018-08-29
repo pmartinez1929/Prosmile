@@ -68,8 +68,6 @@
     height: 100%;
     float: left;
     position: fixed;
-    background: hsla(0,0%,100%,.8);
-    z-index: 4000;
     top: 0;
     left: 0;
     opacity: 0;
@@ -78,6 +76,15 @@
     -moz-transition: .3s all;
     -webkit-transition: all .3s;
     -ms-transition: .3s all;
+    z-index: 2000;
+    #btn-galeria-instalaciones{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: hsla(0,0%,100%,.8);
+    }
     .cont-instalaciones{
       width: 50%;
       margin: 4% auto;

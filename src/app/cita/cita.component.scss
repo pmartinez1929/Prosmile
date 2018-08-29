@@ -93,6 +93,21 @@
           color: #fff;
           margin-bottom: 10px;
         }
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            display:inline-block;
+            margin-top:2%;
+            float:right;
+            //width: 65%;
+            width: 10px;
+            opacity: 1;
+            padding-left: 65%;
+            background: transparent;
+        }
+        input[type="date"]::-webkit-inner-spin-button {
+            /* display: none; <- Crashes Chrome on hover */
+            -webkit-appearance: none;
+            margin: 0;
+        }
         textarea{
           height: 180px;
         }

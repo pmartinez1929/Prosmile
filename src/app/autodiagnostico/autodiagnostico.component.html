@@ -10,7 +10,7 @@
 				</div>
 			</div>
 			<div class="col-xs-12" id="txt-intro">
-				Comprobamos tu salud mental en base a las respuestas a una serie de preguntas que hemos preparado en base a nuestra experiencia en síntomas comunes en la boca de nuestros pacientes.
+				Comprobamos tu salud dental en base a las respuestas a una serie de preguntas que hemos preparado en base a nuestra experiencia en síntomas comunes en la boca de nuestros pacientes.
 			</div>
 			<div id="cont-autodiagnostico" *ngIf="!isAnswered">
 				<div class="col-xs-12 cont-question" *ngFor="let question of questionDiagnostic">
@@ -20,10 +20,15 @@
 						<button (click)="getAnswer(false, question.id)" [ngClass]="question.isPositive == false && question.isAnswer == true ? 'active' : 'no-active'">NO</button>
 					</div>
 				</div>
+				<div class="col-xs-12 error" *ngIf="notAnswered">*Debe seleccionar una respuesta para cada pregunta.</div>
 				<button class="button-go" (click)="goResults()"><img alt="" src="./assets/ico-resultado.svg"><span _ngcontent-c7="" class="ng-tns-c7-9">Ver Resultados</span></button>
 			</div>
 			<!-- -->
       <div id="cont-respuestas" *ngIf="isAnswered">
+				<div class="col-xs-12 messageGoDentist" *ngIf="messageAllNegative">
+					Al parecer usted no tiene ning&uacute;n inconveniente con su salud dental.<br/>
+					Para estar 100% seguros, cont&aacute;ctenos para una revisión de rutina.
+				</div>
 				<div class="col-xs-12 cont-question" *ngFor="let answer of questionDiagnostic">
 					<div class="col-xs-12 question-c" *ngIf="answer.isPositive">
 						<div class="pregunta-a">{{answer.question}}</div>

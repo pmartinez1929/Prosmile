@@ -83,10 +83,17 @@
     pointer-events: none;
   }
 }
-@media screen and (max-width: 1450px){
+@media screen and (max-width: 1835px){
   #tratamientos{
     #cont-tratamiento{
       padding: 10px 15%;
+    }
+  }
+}
+@media screen and (max-width: 1540px){
+  #tratamientos{
+    #cont-tratamiento{
+      padding: 10px 10%;
     }
   }
 }

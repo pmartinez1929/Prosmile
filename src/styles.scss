@@ -88,28 +88,28 @@ button:hover{
     position: absolute;
     width: 40px;
     top: 34%;
-    z-index: 1000;
+    z-index: 5000;
     left: 0;
 }
 .next_arrow {
     position: absolute;
     width: 40px;
     top: 34%;
-    z-index: 1000;
+    z-index: 5000;
     right: 0;
 }
 .prev_arrow2 {
     position: absolute;
     width: 40px;
     top: 40%;
-    z-index: 1000;
+    z-index: 5000;
     left: -8%;
 }
 .next_arrow2 {
     position: absolute;
     width: 40px;
     top: 40%;
-    z-index: 1000;
+    z-index: 5000;
     right: -8%;
 }
 .slick-center {
@@ -154,6 +154,7 @@ textarea:-moz-placeholder { /* Firefox 18- */
     left: 0!important;
     background: #fff;
     box-shadow: 0 4px 5px rgba(51,61,70,.5);
+    cursor: pointer;
     #logoprosmile{
       width: 140px!important;
     }

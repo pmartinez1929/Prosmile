@@ -53,6 +53,11 @@
         width: 96%;
         margin: 20px 2%;
         float: left;
+        .error{
+          color:red;
+          font-size: 14px;
+          font-weight: bold;
+        }
         .cont-question{
             display: -webkit-box;
             display: -ms-flexbox;
@@ -85,6 +90,15 @@
           width: 96%;
           margin: 1% 2%;
           float: left;
+          .messageGoDentist {
+              padding: 10px 3%;
+              width: 100%;
+              float: left;
+              background: rgba(117,206,231,.5);
+              font-size: 1em;
+              font-weight: 500;
+              margin-bottom: 10px;
+          }
           .cont-question {
             margin-bottom: 1px;
             .pregunta-a {
