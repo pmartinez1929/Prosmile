@@ -35,12 +35,15 @@ export class CitaComponent implements OnInit {
     message:''
   }
 
+  dateReserved:boolean = false;
+
   constructor(private router: Router, public appData:AppdataService) { }
 
   ngOnInit() {
     $(document).ready(function(){
       new WOW().init();
     });
+    this.dateReserved =true;
   }
 
   goHome(){
@@ -49,7 +52,16 @@ export class CitaComponent implements OnInit {
 
   sendEmailInformation(){
     console.log(this.formUser);
+    this.dateReserved =false;
     this.appData.sendAppoinmentUser(this.formUser);
+    this.formUser = {
+      name: '',
+      email:'',
+      phone:'',
+      date:'',
+      time:this.horarioHour,
+      message:''
+    }
   }
 
 }

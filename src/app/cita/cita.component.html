@@ -14,12 +14,12 @@
 				<div class="col-md-5 number-c">(593-2) 322 0300</div>
 			</div>
 			<!---->
-      <div class="cont-form">
+      <div class="cont-form" *ngIf="dateReserved">
 				<form (ngSubmit)="sendEmailInformation()">
-					<input class="form-control" type="text" [(ngModel)]='formUser.name' name="name" placeholder="Nombre" >
-					<div class="col-sm-6"><input class="form-control" type="email" [(ngModel)]='formUser.email' name="email" placeholder="E-mail" ></div>
-					<div class="col-sm-6"><input class="form-control" type="text" [(ngModel)]='formUser.phone' name="phone" placeholder="Teléfono" ></div>
-					<div class="col-sm-6"><input class="form-control" id="inputDate" type="date" [(ngModel)]='formUser.date' name="date" placeholder="Fecha" ></div>
+					<input class="form-control" type="text" [(ngModel)]='formUser.name' name="name" placeholder="Nombre" required>
+					<div class="col-sm-6"><input class="form-control" type="email" [(ngModel)]='formUser.email' name="email" placeholder="E-mail" required></div>
+					<div class="col-sm-6"><input class="form-control" type="text" [(ngModel)]='formUser.phone' name="phone" placeholder="Teléfono" required></div>
+					<div class="col-sm-6"><input class="form-control" id="inputDate" type="date" [(ngModel)]='formUser.date' name="date" placeholder="Fecha" required></div>
 					<div class="col-sm-6">
 						<select class="form-control" [(ngModel)]='formUser.time' name="time">
 							<option *ngFor="let horario of horarios" [ngValue]="horario.name">
@@ -30,6 +30,10 @@
 					<textarea class="form-control" [(ngModel)]='formUser.message' name="message"></textarea>
 					<button type="submit"><img alt="" src="./assets/ico-reserva.svg"><span>Agenta tu cita</span></button>
 				</form>
+			</div>
+			<div class="cont-form" *ngIf="!dateReserved">
+				<h2>TU CITA HA SIDO AGENDADA EXITOSAMENTE</h2>
+				<button (click)="goHome()">volver al home</button>
 			</div>
 			<!---->
 		</div>

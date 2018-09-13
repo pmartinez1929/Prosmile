@@ -19,7 +19,7 @@ if(empty($errors))
 	$phone = $request->phone;
 
   //webmaster@prosmile.com.ec
-	$to_email = "pablo.martinez@fcbandfire.com";
+	$to_email = "pablo.martinez@fcbandfire.com, webmaster@prosmile.com.ec";
 
 	$contact = "<p><strong>Name:</strong> $from_name</p>
 				<p><strong>Email:</strong> $from_email</p>

@@ -22,5 +22,11 @@ export class ContactComponent implements OnInit {
 
   contactPage(){
     this.appData.sendContact(this.contact);
+    this.contact = {
+      name: '',
+      email:'',
+      phone:'',
+      message:''
+    }
   }
 }
